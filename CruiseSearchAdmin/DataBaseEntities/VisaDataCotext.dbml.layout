@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 15" name="DataClasses1">
+  <DataContextMoniker Name="/VisaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="58dac112-e1b1-4b64-b745-9872f4461de7" absoluteBounds="2.875, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/VisaDataContext/lanta_visa_dna" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3a67f6a-3506-45b1-a8e6-3436cafe6dc5" absoluteBounds="2.89, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6087106-7b6d-4b53-965f-dfe42d886395" absoluteBounds="7.625, 0.5, 2, 4.8477197265625">
+      <DataClassMoniker Name="/VisaDataContext/tbl_Country" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00e9594c-610c-4d84-a238-4fb9000762b1" absoluteBounds="7.6400000000000006, 0.96, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9cf2544f-e54d-4a99-a783-66d1f4997a08" absoluteBounds="5.125, 0.5, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/VisaDataContext/ServiceList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f990fb20-935f-4ae7-bf2d-c7c2ac58a3ab" absoluteBounds="5.1400000000000006, 0.96, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.625 : 2.44310628255208); (7.125 : 2.44310628255208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VisaDataContext/tbl_Country/tbl_Country_ServiceList" />
+      <nodes>
+        <classShapeMoniker Id="e6087106-7b6d-4b53-965f-dfe42d886395" />
+        <classShapeMoniker Id="9cf2544f-e54d-4a99-a783-66d1f4997a08" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="96462d02-a6d2-4047-8788-a300dab917d9" absoluteBounds="0.5, 0.5, 2, 13.693585611979165">
+      <DataClassMoniker Name="/VisaDataContext/tbl_Partner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97bb5c87-925c-4c78-ac01-ebeb3f7f8d7d" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 13.133585611979166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.20923076923077 : 14.1935856119792); (1.20923076923077 : 14.4435856119792); (1.80461538461538 : 14.4435856119792); (1.80461538461538 : 14.1935856119792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisaDataContext/tbl_Partner/tbl_Partner_tbl_Partner" />
+      <nodes>
+        <classShapeMoniker Id="96462d02-a6d2-4047-8788-a300dab917d9" />
+        <classShapeMoniker Id="96462d02-a6d2-4047-8788-a300dab917d9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.625 : 4.81810628255208); (7.19373377447012 : 4.81810628255208); (7.19373377447012 : 13.0022073265362); (3.81559234650781 : 13.0022073265362); (3.81559234650781 : 3.24166480519598); (3.94160867418279 : 3.24166480519598); (3.94160867418279 : 3.0401025390625)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Caller">
+      <AssociationMoniker Name="/VisaDataContext/tbl_Country/tbl_Country_lanta_visa_dna" />
+      <nodes>
+        <classShapeMoniker Id="e6087106-7b6d-4b53-965f-dfe42d886395" />
+        <classShapeMoniker Id="58dac112-e1b1-4b64-b745-9872f4461de7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.77005126953125); (2.875 : 1.77005126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VisaDataContext/tbl_Partner/tbl_Partner_lanta_visa_dna" />
+      <nodes>
+        <classShapeMoniker Id="96462d02-a6d2-4047-8788-a300dab917d9" />
+        <classShapeMoniker Id="58dac112-e1b1-4b64-b745-9872f4461de7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.125 : 1.77005126953125); (4.875 : 1.77005126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VisaDataContext/ServiceList/ServiceList_lanta_visa_dna" />
+      <nodes>
+        <classShapeMoniker Id="9cf2544f-e54d-4a99-a783-66d1f4997a08" />
+        <classShapeMoniker Id="58dac112-e1b1-4b64-b745-9872f4461de7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c6900548-cabd-4d63-a23a-363d178702f0" absoluteBounds="4.75, 5.375, 2, 6.9630354817708326">
+      <DataClassMoniker Name="/VisaDataContext/tbl_Cost" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be741b5a-8712-4548-80c4-88f6eadb8790" absoluteBounds="4.7650000000000006, 5.8350000000000009, 1.9700000000000002, 6.403035481770833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.9375 : 4.38621256510417); (5.9375 : 5.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VisaDataContext/ServiceList/ServiceList_tbl_Cost" />
+      <nodes>
+        <classShapeMoniker Id="9cf2544f-e54d-4a99-a783-66d1f4997a08" />
+        <classShapeMoniker Id="c6900548-cabd-4d63-a23a-363d178702f0" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

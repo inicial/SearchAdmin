@@ -1,0 +1,831 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD2B62E1-BA3E-4040-991D-6A1ACE78348C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CruiseSearchAdmin</RootNamespace>
+    <AssemblyName>CruiseSearchAdmin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ship.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CruiseSearchAdmin.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>963DAB51DE1016CAA8CB91162310F32825E665C6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CruisSearchAdmin_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v11.2, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v11.2.Core, Version=11.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DxHelpersLib">
+      <HintPath>bin\DxHelpersLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Lanta.SQLConfig">
+      <HintPath>bin\Lanta.SQLConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ExtendedMonthCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ExtendedMonthCalendar.Designer.cs">
+      <DependentUpon>ExtendedMonthCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseEntities\VisaDataCotext.cs">
+      <DependentUpon>VisaDataCotext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseEntities\VisaDataCotext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisaDataCotext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CountryForSeaports\SeaportsVisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CountryForSeaports\SeaportsVisa.Designer.cs">
+      <DependentUpon>SeaportsVisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Deck\CabinsByShips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Deck\CabinsByShips.Designer.cs">
+      <DependentUpon>CabinsByShips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Deck\FormCabinByDeck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Deck\FormCabinByDeck.Designer.cs">
+      <DependentUpon>FormCabinByDeck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Deck\FormDeck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Deck\FormDeck.Designer.cs">
+      <DependentUpon>FormDeck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CabineCategories\CabineCategories.cs" />
+    <Compile Include="Entities\CruiseLines\CruiseLineSetting.cs" />
+    <Compile Include="Abstract\CSACollection.cs" />
+    <Compile Include="Entities\CruiseActions\CruiseActionsCollection.cs" />
+    <Compile Include="Entities\CruiseLines\CruiseLinesCollection.cs" />
+    <Compile Include="Entities\CruiseSearchSettings\CruiseSearchSettingsCollection.cs" />
+    <Compile Include="Entities\Discount\Discount.cs" />
+    <Compile Include="Entities\Discount\DiscountCollection.cs" />
+    <Compile Include="Entities\Excursions\Excursion.cs" />
+    <Compile Include="Entities\Excursions\Collections\ExcursionsCollection.cs" />
+    <Compile Include="Entities\Excursions\PartnerExcursion.cs" />
+    <Compile Include="Entities\Excursions\Collections\PartnerExcursionDatesList.cs" />
+    <Compile Include="Entities\Excursions\PartnerExcursionFee.cs" />
+    <Compile Include="Entities\Excursions\Collections\PartnerExcursionFeesList.cs" />
+    <Compile Include="Entities\Excursions\Collections\PartnerExcursionsList.cs" />
+    <Compile Include="Entities\Seaports.cs" />
+    <Compile Include="Entities\Ships\ShipsCollection.cs" />
+    <Compile Include="Entities\SyncModel\SyncItemsTypeEnum.cs" />
+    <Compile Include="Abstract\Interfaces\ISynchronizeble.cs" />
+    <Compile Include="Entities\SyncModel\SyncBaseProccessor.cs" />
+    <Compile Include="Abstract\SynchronizebleItemCollection.cs" />
+    <Compile Include="Entities\SyncModel\Synchronizer.cs" />
+    <Compile Include="Entities\SyncModel\SyncRecord.cs" />
+    <Compile Include="Enums\SelectItemSetter.cs" />
+    <Compile Include="Enums\WorkMode.cs" />
+    <Compile Include="Forms\Actions\FormSelectedEditedAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actions\FormSelectedEditedAction.designer.cs">
+      <DependentUpon>FormSelectedEditedAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Actions\FormActionsMultiAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actions\FormActionsMultiAdd.Designer.cs">
+      <DependentUpon>FormActionsMultiAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abstract\Interfaces\IActiveRecord.cs" />
+    <Compile Include="Forms\CabineCatigories\FormCabineCatigories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CabineCatigories\FormCabineCatigories.Designer.cs">
+      <DependentUpon>FormCabineCatigories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CruiseLines\FormCruiseLines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CruiseLines\FormCruiseLines.Designer.cs">
+      <DependentUpon>FormCruiseLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CruiseLines\Settings\FormEditCruiseLineSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CruiseLines\Settings\FormEditCruiseLineSettings.Designer.cs">
+      <DependentUpon>FormEditCruiseLineSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CruiseSearchSettings\CruiseSearchSetting.cs" />
+    <Compile Include="Forms\CruiseSearchSettings\FormCruiseSearchSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CruiseSearchSettings\FormCruiseSearchSettings.Designer.cs">
+      <DependentUpon>FormCruiseSearchSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CruiseSearchSettings\FormSqlQueryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CruiseSearchSettings\FormSqlQueryEdit.Designer.cs">
+      <DependentUpon>FormSqlQueryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DopPak\FormPakMultyAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DopPak\FormPakMultyAdd.Designer.cs">
+      <DependentUpon>FormPakMultyAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\EditPartner\FormEditPartnerExcursionsFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\EditPartner\FormEditPartnerExcursionsFee.Designer.cs">
+      <DependentUpon>FormEditPartnerExcursionsFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\EditPartner\FormSelectCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\EditPartner\FormSelectCity.Designer.cs">
+      <DependentUpon>FormSelectCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormEditExcursion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormEditExcursion.Designer.cs">
+      <DependentUpon>FormEditExcursion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\EditPartner\FormEditPartnerExcursion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\EditPartner\FormEditPartnerExcursion.Designer.cs">
+      <DependentUpon>FormEditPartnerExcursion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\Dates\FormExcursionDates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\Dates\FormExcursionDates.Designer.cs">
+      <DependentUpon>FormExcursionDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\Dates\FormExcursionDatesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\Dates\FormExcursionDatesList.Designer.cs">
+      <DependentUpon>FormExcursionDatesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormExcursions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormExcursions.Designer.cs">
+      <DependentUpon>FormExcursions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormPartnerExcursions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormPartnerExcursions.Designer.cs">
+      <DependentUpon>FormPartnerExcursions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormSelectPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormSelectPartner.Designer.cs">
+      <DependentUpon>FormSelectPartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormSelectPort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excursions\FormSelectPort.Designer.cs">
+      <DependentUpon>FormSelectPort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormAddHandSteps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormAddHandSteps.Designer.cs">
+      <DependentUpon>FormAddHandSteps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormEditHandCruise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormEditHandCruise.Designer.cs">
+      <DependentUpon>FormEditHandCruise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormEditHandPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormEditHandPrice.Designer.cs">
+      <DependentUpon>FormEditHandPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormHandCruises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormHandCruises.Designer.cs">
+      <DependentUpon>FormHandCruises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormEditHandItinerary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormEditHandItinerary.Designer.cs">
+      <DependentUpon>FormEditHandItinerary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormNewDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormNewDate.Designer.cs">
+      <DependentUpon>FormNewDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormRecalcCruise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HandCruises\FormRecalcCruise.Designer.cs">
+      <DependentUpon>FormRecalcCruise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Regions\FormPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Regions\FormPorts.Designer.cs">
+      <DependentUpon>FormPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Regions\FormPortsByRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Regions\FormPortsByRegion.Designer.cs">
+      <DependentUpon>FormPortsByRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Regions\FormRedactorRegeon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Regions\FormRedactorRegeon.Designer.cs">
+      <DependentUpon>FormRedactorRegeon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\FormEditUsersAccessRights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\FormEditUsersAccessRights.Designer.cs">
+      <DependentUpon>FormEditUsersAccessRights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\FormEncrypt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\FormEncrypt.Designer.cs">
+      <DependentUpon>FormEncrypt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSetName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSetName.Designer.cs">
+      <DependentUpon>FormSetName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormVisibleType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormVisibleType.Designer.cs">
+      <DependentUpon>FormVisibleType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Itinerary\FormChangeRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Itinerary\FormChangeRegion.Designer.cs">
+      <DependentUpon>FormChangeRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Regions\FormEditRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Regions\FormEditRegion.Designer.cs">
+      <DependentUpon>FormEditRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Itinerary\FormSelectSpecialOffers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Itinerary\FormSelectSpecialOffers.Designer.cs">
+      <DependentUpon>FormSelectSpecialOffers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SaleManagement\FormEditDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaleManagement\FormEditDiscount.Designer.cs">
+      <DependentUpon>FormEditDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SaleManagement\FormSaleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaleManagement\FormSaleManagement.Designer.cs">
+      <DependentUpon>FormSaleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SeaPorts\FormSeaPortAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeaPorts\FormSeaPortAdd.Designer.cs">
+      <DependentUpon>FormSeaPortAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SeaPorts\FormSeaPorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeaPorts\FormSeaPorts.Designer.cs">
+      <DependentUpon>FormSeaPorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SeaPorts\FormSeaPortsParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeaPorts\FormSeaPortsParent.Designer.cs">
+      <DependentUpon>FormSeaPortsParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ships\FormShips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ships\FormShips.Designer.cs">
+      <DependentUpon>FormShips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Spec\FormCruises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Spec\FormCruises.Designer.cs">
+      <DependentUpon>FormCruises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Spec\FormRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Spec\FormRooms.Designer.cs">
+      <DependentUpon>FormRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Spec\FormHandCruisesCashe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Spec\FormHandCruisesCashe.Designer.cs">
+      <DependentUpon>FormHandCruisesCashe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SynchronizationForms\FormSelectSenderBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SynchronizationForms\FormSelectSenderBase.Designer.cs">
+      <DependentUpon>FormSelectSenderBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SynchronizationForms\FormSelectSyncBases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SynchronizationForms\FormSelectSyncBases.Designer.cs">
+      <DependentUpon>FormSelectSyncBases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SynchronizationForms\FormSelectSyncItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SynchronizationForms\FormSelectSyncItems.Designer.cs">
+      <DependentUpon>FormSelectSyncItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SynchronizationForms\Synchronization.cs" />
+    <Compile Include="Forms\Visa\FormVisaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Visa\FormVisaEdit.Designer.cs">
+      <DependentUpon>FormVisaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Visa\FormVisaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Visa\FormVisaInfo.Designer.cs">
+      <DependentUpon>FormVisaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClasses\CruiseFilterHelper.cs" />
+    <Compile Include="HelperClasses\ProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperClasses\SecurityHelper.cs" />
+    <Compile Include="HelperClasses\WorkWithData.cs" />
+    <Compile Include="Enums\AccessRigts.cs" />
+    <Compile Include="Entities\Cruise.cs" />
+    <Compile Include="Entities\CruiseActions\CruiseAction.cs" />
+    <Compile Include="Entities\CruiseLines\CruiseLine.cs" />
+    <Compile Include="Entities\DeparturePort.cs" />
+    <Compile Include="Entities\Itinerary.cs" />
+    <Compile Include="Entities\Region.cs" />
+    <Compile Include="Forms\Actions\FormEditAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Actions\FormEditAction.Designer.cs">
+      <DependentUpon>FormEditAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Itinerary\FormEditCruises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Itinerary\FormEditCruises.Designer.cs">
+      <DependentUpon>FormEditCruises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Itinerary\FormRegionsByItinerary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Itinerary\FormRegionsByItinerary.Designer.cs">
+      <DependentUpon>FormRegionsByItinerary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\Ships\Ship.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EncriptionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataBaseEntities\VisaDataCotext.dbml.layout">
+      <DependentUpon>VisaDataCotext.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\CountryForSeaports\SeaportsVisa.resx">
+      <DependentUpon>SeaportsVisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Deck\CabinsByShips.resx">
+      <DependentUpon>CabinsByShips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Deck\FormCabinByDeck.resx">
+      <DependentUpon>FormCabinByDeck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Deck\FormDeck.resx">
+      <DependentUpon>FormDeck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actions\FormSelectedEditedAction.resx">
+      <DependentUpon>FormSelectedEditedAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actions\FormActionsMultiAdd.resx">
+      <DependentUpon>FormActionsMultiAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CabineCatigories\FormCabineCatigories.resx">
+      <DependentUpon>FormCabineCatigories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CruiseLines\FormCruiseLines.resx">
+      <DependentUpon>FormCruiseLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CruiseLines\Settings\FormEditCruiseLineSettings.resx">
+      <DependentUpon>FormEditCruiseLineSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CruiseSearchSettings\FormCruiseSearchSettings.resx">
+      <DependentUpon>FormCruiseSearchSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CruiseSearchSettings\FormSqlQueryEdit.resx">
+      <DependentUpon>FormSqlQueryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DopPak\FormPakMultyAdd.resx">
+      <DependentUpon>FormPakMultyAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\Dates\FormExcursionDates.resx">
+      <DependentUpon>FormExcursionDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\Dates\FormExcursionDatesList.resx">
+      <DependentUpon>FormExcursionDatesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\EditPartner\FormEditPartnerExcursionsFee.resx">
+      <DependentUpon>FormEditPartnerExcursionsFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\EditPartner\FormSelectCity.resx">
+      <DependentUpon>FormSelectCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\FormEditExcursion.resx">
+      <DependentUpon>FormEditExcursion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\EditPartner\FormEditPartnerExcursion.resx">
+      <DependentUpon>FormEditPartnerExcursion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\FormExcursions.resx">
+      <DependentUpon>FormExcursions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\FormPartnerExcursions.resx">
+      <DependentUpon>FormPartnerExcursions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\FormSelectPartner.resx">
+      <DependentUpon>FormSelectPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excursions\FormSelectPort.resx">
+      <DependentUpon>FormSelectPort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HandCruises\FormAddHandSteps.resx">
+      <DependentUpon>FormAddHandSteps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HandCruises\FormEditHandCruise.resx">
+      <DependentUpon>FormEditHandCruise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HandCruises\FormEditHandPrice.resx">
+      <DependentUpon>FormEditHandPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HandCruises\FormHandCruises.resx">
+      <DependentUpon>FormHandCruises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HandCruises\FormEditHandItinerary.resx">
+      <DependentUpon>FormEditHandItinerary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HandCruises\FormNewDate.resx">
+      <DependentUpon>FormNewDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HandCruises\FormRecalcCruise.resx">
+      <DependentUpon>FormRecalcCruise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Regions\FormPorts.resx">
+      <DependentUpon>FormPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Regions\FormPortsByRegion.resx">
+      <DependentUpon>FormPortsByRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Regions\FormRedactorRegeon.resx">
+      <DependentUpon>FormRedactorRegeon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\FormEditUsersAccessRights.resx">
+      <DependentUpon>FormEditUsersAccessRights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\FormEncrypt.resx">
+      <DependentUpon>FormEncrypt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSetName.resx">
+      <DependentUpon>FormSetName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormVisibleType.resx">
+      <DependentUpon>FormVisibleType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Actions\FormEditAction.resx">
+      <DependentUpon>FormEditAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Itinerary\FormChangeRegion.resx">
+      <DependentUpon>FormChangeRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Itinerary\FormEditCruises.resx">
+      <DependentUpon>FormEditCruises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Regions\FormEditRegion.resx">
+      <DependentUpon>FormEditRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Itinerary\FormRegionsByItinerary.resx">
+      <DependentUpon>FormRegionsByItinerary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Itinerary\FormSelectSpecialOffers.resx">
+      <DependentUpon>FormSelectSpecialOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaleManagement\FormEditDiscount.resx">
+      <DependentUpon>FormEditDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaleManagement\FormSaleManagement.resx">
+      <DependentUpon>FormSaleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SeaPorts\FormSeaPortAdd.resx">
+      <DependentUpon>FormSeaPortAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SeaPorts\FormSeaPorts.resx">
+      <DependentUpon>FormSeaPorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SeaPorts\FormSeaPortsParent.resx">
+      <DependentUpon>FormSeaPortsParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ships\FormShips.resx">
+      <DependentUpon>FormShips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Spec\FormCruises.resx">
+      <DependentUpon>FormCruises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Spec\FormRooms.resx">
+      <DependentUpon>FormRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Spec\FormHandCruisesCashe.resx">
+      <DependentUpon>FormHandCruisesCashe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SynchronizationForms\FormSelectSenderBase.resx">
+      <DependentUpon>FormSelectSenderBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SynchronizationForms\FormSelectSyncBases.resx">
+      <DependentUpon>FormSelectSyncBases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SynchronizationForms\FormSelectSyncItems.resx">
+      <DependentUpon>FormSelectSyncItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Visa\FormVisaEdit.resx">
+      <DependentUpon>FormVisaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Visa\FormVisaInfo.resx">
+      <DependentUpon>FormVisaInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelperClasses\ProjectForm.resx">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseEntities\VisaDataCotext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>VisaDataCotext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lanta.sqlconfig.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\EncriptionService\EncryptionService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\refresh2.png" />
+    <None Include="Resources\refresh1.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\306298471.png" />
+    <None Include="Resources\30629847.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\empty.gif" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\tag_blue_edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\delete1.png" />
+    <None Include="Resources\tag_blue_edit1.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\checkbox_unchecked.png" />
+    <None Include="Resources\stock_filters-invert.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Service References\EncriptionService\EncryptionService.disco" />
+    <None Include="Service References\EncriptionService\configuration91.svcinfo" />
+    <None Include="Service References\EncriptionService\configuration.svcinfo" />
+    <None Include="Service References\EncriptionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\key-32x32.png" />
+    <Content Include="README.txt" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\reload.png" />
+    <Content Include="ship.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EncriptionService\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
